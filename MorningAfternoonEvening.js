@@ -2,19 +2,24 @@ document.write("<h4>Good Morning, Good Afternoon, and If I don't See You, Good N
 
 var Greeting=function(MilitaryTime){
 
-if (MilitaryTime >= 0000 || < 1200){
- console.log("Good Morning!");   
+if ((MilitaryTime >= 0000) && (MilitaryTime < 1200)){
+ return("Good Morning!");   
 }
-    else if (MilitaryTime > 1200 || < 1700){
-        console.log("Good Afternoon!");
+    else if ((MilitaryTime > 1200) && (MilitaryTime < 1700)){
+        return("Good Afternoon!");
     }
-else if (MilitaryTime >=1700 || <=2359){
-        console.log("Good Evening!");   
+else if ((MilitaryTime >=1700) && (MilitaryTime <=2359)){
+        return("Good Evening!");   
 }
 
 else{
- console.log("It must be exactly noon, that greeting is not in my parameters. You've created a time paradox, Marty!")   
- return Greeting;
+ return("It must be exactly noon, that greeting is not in my parameters. You've created a time paradox, Marty!")   
+    }
 }
-}
-document.write("test 3: " + MilitaryTime("1200"));
+document.write("test 3: " + Greeting(1200)); 
+
+
+
+
+
+/*  '(time > = 0) && (time  < 1200)' from Matt*/
