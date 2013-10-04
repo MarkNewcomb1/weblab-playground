@@ -14,3 +14,16 @@ var Reversal = function(string) {
 }
 //essentially console.log
 document.write('test 2: ' + Reversal('hello'));
+
+$(document).ready(function() {
+  $('.execute-reverse-string').click(function(){
+    alert("I got clicked");
+      var text = $('#reverse-input').val();
+      $('#reverse-output').val(Reversal(text));
+      return false;
+  });
+      $('.reset-reverse-string').click(function(){
+      $('#reverse-input, #reverse-output').val('');
+      return false;
+});
+})
